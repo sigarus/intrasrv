@@ -1,4 +1,4 @@
-package main.java;
+package main;
 
 
 import org.eclipse.jetty.server.Handler;
@@ -19,6 +19,7 @@ public class Main {
         HandlerList hnd = new HandlerList();
         hnd.setHandlers(new Handler[] {resourceHandler});
 
+        server.setHandler(hnd);
         server.start();
         System.out.println("Server started");
 
