@@ -39,14 +39,14 @@ public class UserProfile {
     }
 
 
-    public UserProfile(String firstName, String middleName, String lastName, String login, String psssword) {
+    public UserProfile(String firstName, String middleName, String lastName, String login, String psssword, boolean adm) {
         this.ID =0;
         this.firstName = firstName;
         this.middleName = middleName;
         this.lastName = lastName;
         this.login = login;
         this.psssword = psssword;
-        this.adm = false;
+        this.adm = adm;
         this.banned = false;
     }
 
@@ -59,6 +59,14 @@ public class UserProfile {
         this.psssword = user.getPsssword();
         this.adm = user.isAdm();
         this.banned = user.isBanned();
+    }
+
+    public void banUser(){
+        this.setBanned(true);
+    }
+
+    public void unBanUser(){
+        this.setBanned(false);
     }
 
     public boolean isAdm(){
