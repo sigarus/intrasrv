@@ -3,6 +3,7 @@ package accounting;
 
 import org.eclipse.jetty.server.session.Session;
 
+import javax.servlet.http.HttpSession;
 import java.util.HashMap;
 
 /**
@@ -50,7 +51,7 @@ public class AccountService {
         return  sessions.get(session);
     }
 
-    public void deleteSession(String session){
+    public void deleteSession(HttpSession session){
         sessions.remove(session);
 
     }

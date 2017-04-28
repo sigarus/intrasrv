@@ -6,6 +6,8 @@
 </head>
 <body>
   Hello!!! This is Jetty!!!
+  <table>
+  <tr><td>
   You can sign up:
   <form action="/signup" method="post">
       First Name: <input type="text" name="firstname"> <br>
@@ -15,5 +17,20 @@
       password: <input type="password" name="password">
       <input type="SUBMIT" name="Sign Up">
   </form>
+  </td>
+  </tr>
+  </table>
+  <br>
+  <table>
+      <tr><td>
+          Or you can sign in:
+          <form action="/signin" method="post">
+              login: <input type="text" name="login"><br>
+              password: <input type="password" name="password">
+              <input type="SUBMIT" name="Sign In">
+          </form>
+      </td>
+      </tr>
+  </table>
 </body>
 </html>
