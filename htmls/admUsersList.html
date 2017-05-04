@@ -5,8 +5,8 @@
     <title>Title</title>
 </head>
 <body>
-<#list users as user>
-    ${user} <br>
+<#list users as login, user>
+    ${login} ${user.firstName} ${user.middleName} ${user.lastName}   <br>
 </#list>
 
 </body>

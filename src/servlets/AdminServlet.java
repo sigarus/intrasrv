@@ -9,7 +9,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.Map;
 
 /**
  * Created by SERGEY on 28.04.2017.
@@ -29,7 +28,7 @@ public class AdminServlet extends HttpServlet {
         PageGenerator page = PageGenerator.instance();
 
 
-        resp.getWriter().println(page.getPage("admUsersList.html", accountService.getUsers()));
+        resp.getWriter().println(page.getPage("admUsersList.html", accountService.getHashOfUsers()));
 
 
     }
@@ -59,7 +58,7 @@ public class AdminServlet extends HttpServlet {
              }
              return false;
         }
-        if (!user.isAdm()) {
+        if (!user.getAdm()) {
             resp.setContentType("text/html;charset=utf-8");
             resp.setStatus(HttpServletResponse.SC_OK);
             try {
@@ -69,7 +68,7 @@ public class AdminServlet extends HttpServlet {
             }
             return false;
         }
-        if (user.isBanned()) {
+        if (user.getBanned()) {
              resp.setContentType("text/html;charset=utf-8");
              resp.setStatus(HttpServletResponse.SC_OK);
              try {

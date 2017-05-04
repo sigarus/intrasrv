@@ -10,7 +10,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.HashMap;
-import java.util.Map;
 
 /**
  * Created by SERGEY on 28.04.2017.
@@ -37,7 +36,7 @@ public class SignInServlet extends HttpServlet {
 
         if (user != null && password.equals(user.getPsssword())){
 
-            if (user.isBanned()){
+            if (user.getBanned()){
                 resp.getWriter().println("User " + user.getLogin() + " is banned !");
                 resp.setStatus(HttpServletResponse.SC_OK);
             }

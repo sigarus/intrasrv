@@ -2,22 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dbb3efba-5171-4197-8335-14d701808e92" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/htmls/admUsersList.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/accounting/UserExistsExtension.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/accounting/AccountService.class" afterPath="$PROJECT_DIR$/target/classes/accounting/AccountService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/servlets/SignInServlet.class" afterPath="$PROJECT_DIR$/target/classes/servlets/SignInServlet.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/servlets/SignUpServlet.class" afterPath="$PROJECT_DIR$/target/classes/servlets/SignUpServlet.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/htmls/wellcome.html" afterPath="$PROJECT_DIR$/htmls/wellcome.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/intrasrv.iml" afterPath="$PROJECT_DIR$/intrasrv.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/htmls/admUsersList.html" afterPath="$PROJECT_DIR$/htmls/admUsersList.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/accounting/AccountService.java" afterPath="$PROJECT_DIR$/src/accounting/AccountService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/accounting/UserExistsException.java" afterPath="$PROJECT_DIR$/src/accounting/UserExistsException.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/Main.java" afterPath="$PROJECT_DIR$/src/main/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/accounting/UserProfile.java" afterPath="$PROJECT_DIR$/src/accounting/UserProfile.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/servlets/AdminServlet.java" afterPath="$PROJECT_DIR$/src/servlets/AdminServlet.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/servlets/SignInServlet.java" afterPath="$PROJECT_DIR$/src/servlets/SignInServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/servlets/SignUpServlet.java" afterPath="$PROJECT_DIR$/src/servlets/SignUpServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/templater/PageGenerator.java" afterPath="$PROJECT_DIR$/src/templater/PageGenerator.java" />
     </list>
     <ignored path="intrasrv.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -49,23 +38,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="24" column="84" selection-start-line="24" selection-start-column="84" selection-end-line="24" selection-end-column="84" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="AdminServlet.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/servlets/AdminServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="31" column="92" selection-start-line="31" selection-start-column="92" selection-end-line="31" selection-end-column="92" />
+            <state relative-caret-position="17">
+              <caret line="30" column="98" selection-start-line="30" selection-start-column="98" selection-end-line="30" selection-end-column="98" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -73,43 +50,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="admUsersList.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="admUsersList.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/htmls/admUsersList.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserProfile.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/accounting/UserProfile.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="918">
-              <caret line="70" column="0" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PageGenerator.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/templater/PageGenerator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="453">
-              <caret line="49" column="32" selection-start-line="49" selection-start-column="32" selection-end-line="49" selection-end-column="32" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="wellcome.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/htmls/wellcome.html">
-          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="170">
-              <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -118,21 +63,32 @@
       <file leaf-file-name="SignInServlet.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/servlets/SignInServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="411">
-              <caret line="48" column="76" selection-start-line="48" selection-start-column="16" selection-end-line="48" selection-end-column="76" />
+            <state relative-caret-position="646">
+              <caret line="47" column="76" selection-start-line="47" selection-start-column="16" selection-end-line="47" selection-end-column="76" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AccountService.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="UserProfile.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/accounting/UserProfile.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="236">
+              <caret line="71" column="23" selection-start-line="71" selection-start-column="23" selection-end-line="71" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AccountService.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/accounting/AccountService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="61" column="32" selection-start-line="61" selection-start-column="32" selection-end-line="61" selection-end-column="32" />
+            <state relative-caret-position="298">
+              <caret line="66" column="32" selection-start-line="66" selection-start-column="32" selection-end-line="66" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1458#1473#0" expanded="true" />
+                <element signature="e#1463#1478#0" expanded="true" />
+                <element signature="e#1532#1547#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -141,7 +97,7 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/htmls/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="470">
+            <state relative-caret-position="400">
               <caret line="29" column="48" selection-start-line="29" selection-start-column="48" selection-end-line="29" selection-end-column="48" />
               <folding />
             </state>
@@ -174,7 +130,6 @@
         <option value="$PROJECT_DIR$/src/main/main/Main.java" />
         <option value="$PROJECT_DIR$/src/auth/AuthSevice.java" />
         <option value="$PROJECT_DIR$/src/auth/AccountService.java" />
-        <option value="$PROJECT_DIR$/src/accounting/UserProfile.java" />
         <option value="$PROJECT_DIR$/src/servlets/SignUpServlet.java" />
         <option value="$PROJECT_DIR$/htmls/index.html" />
         <option value="$PROJECT_DIR$/src/accounting/UserExistsExtension.java" />
@@ -190,6 +145,7 @@
         <option value="$PROJECT_DIR$/htmls/wellcome.html" />
         <option value="$PROJECT_DIR$/src/accounting/AccountService.java" />
         <option value="$PROJECT_DIR$/htmls/admUsersList.html" />
+        <option value="$PROJECT_DIR$/src/accounting/UserProfile.java" />
       </list>
     </option>
   </component>
@@ -772,6 +728,60 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/accounting/UserProfile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="918">
+          <caret line="70" column="0" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/templater/PageGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="49" column="32" selection-start-line="49" selection-start-column="32" selection-end-line="49" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/htmls/wellcome.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/servlets/SignInServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="48" column="76" selection-start-line="48" selection-start-column="16" selection-end-line="48" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/accounting/AccountService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="850">
+          <caret line="61" column="32" selection-start-line="61" selection-start-column="32" selection-end-line="61" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1463#1478#0" expanded="true" />
+            <element signature="e#1532#1547#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/htmls/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" column="48" selection-start-line="29" selection-start-column="48" selection-end-line="29" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1037">
@@ -896,8 +906,9 @@
         <state relative-caret-position="748">
           <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
           <folding>
-            <element signature="e#1406#1407#0" expanded="true" />
-            <element signature="e#1771#1772#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#1463#1478#0" expanded="true" />
+            <element signature="e#1532#1547#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -941,8 +952,9 @@
         <state relative-caret-position="374">
           <caret line="24" column="31" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
           <folding>
-            <element signature="e#1406#1407#0" expanded="true" />
-            <element signature="e#1771#1772#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#1463#1478#0" expanded="true" />
+            <element signature="e#1532#1547#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1007,8 +1019,9 @@
         <state relative-caret-position="0">
           <caret line="0" column="9" selection-start-line="0" selection-start-column="9" selection-end-line="0" selection-end-column="9" />
           <folding>
-            <element signature="e#1406#1407#0" expanded="true" />
-            <element signature="e#1771#1772#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#1463#1478#0" expanded="true" />
+            <element signature="e#1532#1547#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1093,39 +1106,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/accounting/UserProfile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="918">
-          <caret line="70" column="0" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/templater/PageGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="453">
-          <caret line="49" column="32" selection-start-line="49" selection-start-column="32" selection-end-line="49" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
+        <state relative-caret-position="255">
           <caret line="24" column="84" selection-start-line="24" selection-start-column="84" selection-end-line="24" selection-end-column="84" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/htmls/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="470">
-          <caret line="29" column="48" selection-start-line="29" selection-start-column="48" selection-end-line="29" selection-end-column="48" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1137,40 +1124,67 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/servlets/SignInServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="47" column="76" selection-start-line="47" selection-start-column="16" selection-end-line="47" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/servlets/AdminServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="31" column="92" selection-start-line="31" selection-start-column="92" selection-end-line="31" selection-end-column="92" />
+        <state relative-caret-position="17">
+          <caret line="30" column="98" selection-start-line="30" selection-start-column="98" selection-end-line="30" selection-end-column="98" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/servlets/SignInServlet.java">
+    <entry file="file://$PROJECT_DIR$/src/templater/PageGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="411">
-          <caret line="48" column="76" selection-start-line="48" selection-start-column="16" selection-end-line="48" selection-end-column="76" />
+        <state relative-caret-position="400">
+          <caret line="49" column="32" selection-start-line="49" selection-start-column="32" selection-end-line="49" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/htmls/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="29" column="48" selection-start-line="29" selection-start-column="48" selection-end-line="29" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/htmls/admUsersList.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/accounting/UserProfile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="71" column="23" selection-start-line="71" selection-start-column="23" selection-end-line="71" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/accounting/AccountService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="61" column="32" selection-start-line="61" selection-start-column="32" selection-end-line="61" selection-end-column="32" />
+        <state relative-caret-position="298">
+          <caret line="66" column="32" selection-start-line="66" selection-start-column="32" selection-end-line="66" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1458#1473#0" expanded="true" />
+            <element signature="e#1463#1478#0" expanded="true" />
+            <element signature="e#1532#1547#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/htmls/admUsersList.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>

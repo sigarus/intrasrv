@@ -56,15 +56,16 @@ public class AccountService {
 
     }
 
-    public Map getUsers(){
+    public Map getHashOfUsers(){
+        HashMap<String,Object> root = new HashMap<String,Object>();
         HashMap<String,Object> users = new HashMap<String,Object>();
         Iterator<Map.Entry<String,UserProfile>> iter = usersDB.entrySet().iterator();
         while (iter.hasNext()) {
             Map.Entry<String, UserProfile> pair = iter.next();
             users.put(pair.getValue().getLogin(),(Object)pair.getValue());
         }
-
-        return users;
+        root.put("users",users);
+        return root;
     }
 
 

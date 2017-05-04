@@ -57,8 +57,8 @@ public class UserProfile {
         this.lastName = user.getLastName();
         this.login = user.getLogin();
         this.psssword = user.getPsssword();
-        this.adm = user.isAdm();
-        this.banned = user.isBanned();
+        this.adm = user.getAdm();
+        this.banned = user.getBanned();
     }
 
     public void banUser(){
@@ -69,11 +69,11 @@ public class UserProfile {
         this.setBanned(false);
     }
 
-    public boolean isAdm(){
+    public boolean getAdm(){
         return adm;
     }
 
-    public  boolean isBanned(){
+    public  boolean getBanned(){
         return banned;
     }
 
