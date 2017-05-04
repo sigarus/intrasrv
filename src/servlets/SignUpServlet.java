@@ -1,7 +1,7 @@
 package servlets;
 
 import accounting.AccountService;
-import accounting.UserExistsExtension;
+import accounting.UserExistsException;
 import accounting.UserProfile;
 
 import javax.servlet.ServletException;
@@ -40,7 +40,7 @@ public class SignUpServlet extends HttpServlet {
 
         try {
             accountService.addUser(newuser);
-        } catch (UserExistsExtension userExistsExtension) {
+        } catch (UserExistsException userExistsExtension) {
             resp.setStatus(HttpServletResponse.SC_OK);
             resp.getWriter().println("User:" + newuser.getLogin() + "is already presents.");
             return;

@@ -1,10 +1,10 @@
 package accounting;
 
 
-import org.eclipse.jetty.server.session.Session;
-
 import javax.servlet.http.HttpSession;
 import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
 
 /**
  * Created by SERGEY on 26.04.2017.
@@ -22,15 +22,15 @@ public class AccountService {
 
         try {
             addUser(adm);
-        } catch (UserExistsExtension e) {
+        } catch (UserExistsException e) {
            e.printStackTrace();
         }
     }
 
 
-    public void addUser(UserProfile user) throws UserExistsExtension{
+    public void addUser(UserProfile user) throws UserExistsException {
           if (isUserExists(user.getLogin())) {
-            throw new UserExistsExtension(user.getLogin());
+            throw new UserExistsException(user.getLogin());
         }
           usersDB.put(user.getLogin(),user);
     }
@@ -54,6 +54,17 @@ public class AccountService {
     public void deleteSession(HttpSession session){
         sessions.remove(session);
 
+    }
+
+    public Map getUsers(){
+        HashMap<String,Object> users = new HashMap<String,Object>();
+        Iterator<Map.Entry<String,UserProfile>> iter = usersDB.entrySet().iterator();
+        while (iter.hasNext()) {
+            Map.Entry<String, UserProfile> pair = iter.next();
+            users.put(pair.getValue().getLogin(),(Object)pair.getValue());
+        }
+
+        return users;
     }
 
 

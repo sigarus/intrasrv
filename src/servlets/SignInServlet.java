@@ -2,12 +2,15 @@ package servlets;
 
 import accounting.AccountService;
 import accounting.UserProfile;
+import templater.PageGenerator;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Created by SERGEY on 28.04.2017.
@@ -31,13 +34,26 @@ public class SignInServlet extends HttpServlet {
 
 
         UserProfile user = accountService.getUserByLogin(login);
+
         if (user != null && password.equals(user.getPsssword())){
-            accountService.addSession(req.getSession().getId(),user);
-            resp.getWriter().println("User " + user.getLogin() + "! Welcome!");
-            resp.setStatus(HttpServletResponse.SC_OK);
+
+            if (user.isBanned()){
+                resp.getWriter().println("User " + user.getLogin() + " is banned !");
+                resp.setStatus(HttpServletResponse.SC_OK);
+            }
+            else{
+                accountService.addSession(req.getSession().getId(),user);
+                PageGenerator page = PageGenerator.instance();
+                HashMap<String,Object> map =new HashMap<String,Object>();
+                map.put("login",user.getFirstName() + " " + user.getMiddleName());
+                resp.getWriter().println(page.getPage("wellcome.html",map));
+
+               // resp.getWriter().println("User " + user.getLogin() + "! Welcome!");
+                resp.setStatus(HttpServletResponse.SC_OK);
+            }
         }
         else{
-            resp.getWriter().println("I do not know you.");
+            resp.getWriter().println("Wrong login or password.");
             resp.setStatus(HttpServletResponse.SC_OK);
         }
 
