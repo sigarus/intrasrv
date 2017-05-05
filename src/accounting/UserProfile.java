@@ -5,7 +5,7 @@ package accounting;
  */
 public class UserProfile {
 
-    private long ID;
+    private long id;
     private String firstName;
     private String middleName;
     private String lastName;
@@ -14,8 +14,8 @@ public class UserProfile {
     private boolean adm;
     private  boolean banned;
 
-    public long getID() {
-        return ID;
+    public long getId() {
+        return id;
     }
 
     public String getFirstName() {
@@ -40,7 +40,7 @@ public class UserProfile {
 
 
     public UserProfile(String firstName, String middleName, String lastName, String login, String psssword, boolean adm) {
-        this.ID =0;
+        this.id =0;
         this.firstName = firstName;
         this.middleName = middleName;
         this.lastName = lastName;
@@ -51,7 +51,7 @@ public class UserProfile {
     }
 
     public  UserProfile(UserProfile user){
-        this.ID =user.getID();
+        this.id =user.getId();
         this.firstName = user.getFirstName();
         this.middleName = user.getMiddleName();
         this.lastName = user.getLastName();
@@ -92,8 +92,8 @@ public class UserProfile {
                 '}';
     }
 
-    public void setID(long ID) {
-        this.ID = ID;
+    public void setId(long id) {
+        this.id = id;
     }
 
     public void setFirstName(String firstName) {

@@ -9,6 +9,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
 
 /**
  * Created by SERGEY on 28.04.2017.
@@ -25,12 +29,17 @@ public class AdminServlet extends HttpServlet {
         }
         resp.setContentType("text/html;charset=utf-8");
         resp.setStatus(HttpServletResponse.SC_OK);
+
+        resp.getWriter().println(getUsersAccountsPage());
+
+
+    }
+
+    private String getUsersAccountsPage(){
         PageGenerator page = PageGenerator.instance();
-
-
-        resp.getWriter().println(page.getPage("admUsersList.html", accountService.getHashOfUsers()));
-
-
+        HashMap<String,Object> root = new HashMap<String,Object>();
+        root.put("users",accountService.getUsersObjects());
+        return page.getPage("admUsersList.html", root);
     }
 
     @Override
@@ -38,11 +47,37 @@ public class AdminServlet extends HttpServlet {
         if (!assertSession(req.getSession().getId(), resp)) {
             return;
         }
-        String command = req.getParameter("command");
-        if (command.equals("")) {
+        resp.setContentType("text/html;charset=utf-8");
+        resp.setStatus(HttpServletResponse.SC_OK);
+        String action = req.getParameter("action");
 
+
+        Map<String,String[]> params =  req.getParameterMap();
+        UserProfile user = null;
+        for (Map.Entry<String, String[]> pair : params.entrySet()) {
+            if (pair.getKey().indexOf("id_") == 0){
+               if (action.equals("delete")){
+                   user = accountService.getUserById(Long.getLong(pair.getValue()[0]));
+                  // accountService.deleteSessionById(Long.getLong(pair.getValue()[0]));
+                   accountService.deleteUserById(Long.getLong(pair.getValue()[0]));
+
+               }
+               if (action.equals("ban")){
+                   user = accountService.getUserById(Long.getLong(pair.getValue()[0]));
+                   if (user != null){user.setBanned(!user.getBanned());}
+               }
+                if (action.equals("adm")){
+                    user = accountService.getUserById(Long.getLong(pair.getValue()[0]));
+                    if (user != null){user.setAdm(!user.getAdm());}
+                }
+            }
 
         }
+
+        resp.getWriter().println(getUsersAccountsPage());
+
+
+
     }
 
      private boolean assertSession(String sessionId, HttpServletResponse resp) {

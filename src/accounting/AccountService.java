@@ -32,12 +32,34 @@ public class AccountService {
           if (isUserExists(user.getLogin())) {
             throw new UserExistsException(user.getLogin());
         }
+        long i=0;
+        for (Map.Entry<String,UserProfile> pair : usersDB.entrySet()) {
+            if (i < pair.getValue().getId()) { i = pair.getValue().getId();}
+        }
+          user.setId(i+1);
           usersDB.put(user.getLogin(),user);
+    }
+
+    public void  deleteUserById(long id){
+        String key="";
+        for (Map.Entry<String,UserProfile> pair : usersDB.entrySet()) {
+            if (pair.getValue().getId()==id) { key = pair.getKey();}
+        }
+        if (!key.isEmpty()){usersDB.remove(key);};
     }
 
     public UserProfile getUserByLogin(String login){
         return usersDB.get(login);
     }
+
+    public UserProfile getUserById(long id){
+        UserProfile user = null;
+        for (Map.Entry<String,UserProfile> pair : usersDB.entrySet()) {
+            if (pair.getValue().getId()==id) { user = pair.getValue();}
+        }
+        return user;
+    }
+
 
     public boolean isUserExists(String login){
         return (getUserByLogin(login) != null);
@@ -47,16 +69,37 @@ public class AccountService {
         sessions.put(session,user);
     }
 
+    public void deleteSessionById(long id){
+        String session="";
+        for (Map.Entry<String,UserProfile> pair : sessions.entrySet()) {
+            if (pair.getValue().getId()==id) { session = pair.getKey();}
+        }
+        if (!session.isEmpty()){deleteSession(session);};
+    }
+
     public UserProfile getUserBySession(String session){
         return  sessions.get(session);
     }
 
-    public void deleteSession(HttpSession session){
+    public void deleteSession(String session){
         sessions.remove(session);
 
     }
 
-    public Map getHashOfUsers(){
+    public HashMap<String, Object> getUsersObjects(){
+
+        HashMap<String,Object> users = new HashMap<String,Object>();
+        Iterator<Map.Entry<String,UserProfile>> iter = usersDB.entrySet().iterator();
+        while (iter.hasNext()) {
+            Map.Entry<String, UserProfile> pair = iter.next();
+            users.put(pair.getValue().getLogin(),(Object)pair.getValue());
+        }
+
+        return users;
+    }
+
+
+    /*public Map getHashOfUsers(){
         HashMap<String,Object> root = new HashMap<String,Object>();
         HashMap<String,Object> users = new HashMap<String,Object>();
         Iterator<Map.Entry<String,UserProfile>> iter = usersDB.entrySet().iterator();
@@ -67,6 +110,6 @@ public class AccountService {
         root.put("users",users);
         return root;
     }
-
+    */
 
 }

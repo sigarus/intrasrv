@@ -5,9 +5,23 @@
     <title>Title</title>
 </head>
 <body>
+<form action="/admin" method="post">
+<table border="1">
+    <tr><td>Login</td><td>user</td><td>admin</td><td>banned</td><td>check</td></tr>
 <#list users as login, user>
-    ${login} ${user.firstName} ${user.middleName} ${user.lastName}   <br>
+    <tr><td>${login}</td> <td>${user.firstName} ${user.middleName} ${user.lastName}</td><td> ${user.adm?string('yes', 'no')}</td> <td>${user.banned?string('yes', 'no')}</td>
+        <td> <input type="checkbox" name="id_${user.id}" value="${user.id}"> </td></tr>
 </#list>
+</table>
+<div>
+    Action:<br>
+    <input type="radio" name="action" value="delete">Delete user(s)
+    <input type="radio" name="action" value="adm"> adm/no adm
+    <input type="radio" name="action" value="ban"> ban/unban
+</div>
+<input type="submit" value="submit">
 
+
+</form>
 </body>
 </html>
