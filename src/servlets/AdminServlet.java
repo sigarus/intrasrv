@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
@@ -54,29 +55,40 @@ public class AdminServlet extends HttpServlet {
 
         Map<String,String[]> params =  req.getParameterMap();
         UserProfile user = null;
+        ArrayList<String> ids = new ArrayList<>();
         for (Map.Entry<String, String[]> pair : params.entrySet()) {
             if (pair.getKey().indexOf("id_") == 0){
-               if (action.equals("delete")){
-                   user = accountService.getUserById(Long.getLong(pair.getValue()[0]));
-                  // accountService.deleteSessionById(Long.getLong(pair.getValue()[0]));
-                   accountService.deleteUserById(Long.getLong(pair.getValue()[0]));
+                ids.add(pair.getValue()[0]);
+            }
+        }
 
-               }
-               if (action.equals("ban")){
-                   user = accountService.getUserById(Long.getLong(pair.getValue()[0]));
-                   if (user != null){user.setBanned(!user.getBanned());}
-               }
-                if (action.equals("adm")){
-                    user = accountService.getUserById(Long.getLong(pair.getValue()[0]));
-                    if (user != null){user.setAdm(!user.getAdm());}
+
+
+        if (action.equals("delete")){
+            for (int i = 0;i < ids.size();i++ ) {
+                accountService.deleteUserById(Long.parseLong(ids.get(i)));
+            }
+        }
+
+        if (action.equals("ban")){
+            for (int i = 0; i < ids.size(); i++ ) {
+                user = accountService.getUserById(Long.parseLong(ids.get(i)));
+                if (user != null) {
+                    user.setBanned(!user.getBanned());
                 }
             }
+        }
 
+        if (action.equals("adm")){
+            for (int i = 0;i < ids.size();i++ ) {
+                user = accountService.getUserById(Long.parseLong(ids.get(i)));
+                if (user != null) {
+                    user.setAdm(!user.getAdm());
+                }
+            }
         }
 
         resp.getWriter().println(getUsersAccountsPage());
-
-
 
     }
 

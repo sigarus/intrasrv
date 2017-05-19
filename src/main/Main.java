@@ -2,6 +2,9 @@ package main;
 
 
 import accounting.AccountService;
+import accounting.AccountServiceDB;
+import accounting.AccountServiceImpl;
+import dbservice.DBService;
 import org.eclipse.jetty.server.Handler;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.server.handler.HandlerList;
@@ -18,7 +21,8 @@ import servlets.SignUpServlet;
 public class Main {
     public static void main(String[] args) throws Exception{
 
-        AccountService accountService = new AccountService();
+        DBService dbService = new DBService();
+        AccountService accountService = new AccountServiceDB(dbService);
 
         Server server = new Server(8080);
 

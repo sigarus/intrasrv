@@ -1,0 +1,2 @@
+CREATE SEQUENCE user_ids;
+CREATE TABLE users (id INTEGER PRIMARY KEY DEFAULT NEXTVAL('user_ids'), firstName CHAR(64), middleName CHAR(64), lastName CHAR(64),login CHAR(64), password CHAR(64), adm boolean, banned boolean);
